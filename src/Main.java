@@ -5,13 +5,13 @@ public class Main {
     public static void main(String[] args) {
 
         int[] arr  = generateRandomArray();
-        int sum = 0;
-        for (int i : arr) {
-            sum = sum + i;
+        double average = 0;
+        for (int i = 0; i < arr.length; i++) {
+             average += arr[i]/arr.length;
         }
-        System.out.println("Сумма трат за месяц составила " + sum);
-    }
+        System.out.println("Средняя сумма трат за месяц составила "+ average + " рублей");
 
+    }
         public static int[] generateRandomArray() {
             java.util.Random random = new java.util.Random();
             int[] arr = new int[30];
