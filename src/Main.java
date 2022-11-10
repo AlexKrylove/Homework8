@@ -5,17 +5,11 @@ public class Main {
     public static void main(String[] args) {
 
         int[] arr  = generateRandomArray();
-        int min = arr [0];
-        int max = arr [0];
+        double average = 0;
         for (int i = 0; i < arr.length; i++) {
-             if (arr[i] < min) {
-                min = arr[i];
-             } else if (arr[i] > max){
-                 max = arr [i];
-             }
+             average += arr[i]/arr.length;
         }
-        System.out.println("Минимальная сумма трат за день составила "+ min + " рублей");
-        System.out.println("Максимальное сумма трат за день составила "+ max + " рублей");
+        System.out.println("Средняя сумма трат за месяц составила "+ average + " рублей");
 
     }
         public static int[] generateRandomArray() {
