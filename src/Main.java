@@ -1,25 +1,15 @@
-import java.util.Arrays;
-
 public class Main {
 
     public static void main(String[] args) {
 
-        int[] arr  = generateRandomArray();
-        double average = 0;
-        for (int i = 0; i < arr.length; i++) {
-             average += arr[i]/arr.length;
+        char[] arr = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        int size = arr.length;
+        for (int i = 0; i < size / 2; i++) {
+            int name = arr[i];
+            arr[i] = arr[size - 1 - i];
+            arr[size - 1 - i] = (char) name;
+
+            System.out.println(arr);
         }
-        System.out.println("Средняя сумма трат за месяц составила "+ average + " рублей");
-
     }
-        public static int[] generateRandomArray() {
-            java.util.Random random = new java.util.Random();
-            int[] arr = new int[30];
-            for (int i = 0; i < arr.length; i++) {
-                arr[i] = random.nextInt(100_000) + 100_000;
-
-            }
-            return arr;
-        }
-
-    }
+}
