@@ -5,13 +5,19 @@ public class Main {
     public static void main(String[] args) {
 
         int[] arr  = generateRandomArray();
-        int sum = 0;
-        for (int i : arr) {
-            sum = sum + i;
+        int min = arr [0];
+        int max = arr [0];
+        for (int i = 0; i < arr.length; i++) {
+             if (arr[i] < min) {
+                min = arr[i];
+             } else if (arr[i] > max){
+                 max = arr [i];
+             }
         }
-        System.out.println("Сумма трат за месяц составила " + sum);
-    }
+        System.out.println("Минимальная сумма трат за день составила "+ min + " рублей");
+        System.out.println("Максимальное сумма трат за день составила "+ max + " рублей");
 
+    }
         public static int[] generateRandomArray() {
             java.util.Random random = new java.util.Random();
             int[] arr = new int[30];
